@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
 public class UserService {
 
     private final UserRepository userRepository;
@@ -19,14 +18,17 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    @Transactional
     public void addUser(User user) {
         userRepository.addUser(user);
     }
 
+    @Transactional
     public void deleteUser(long id) {
         userRepository.deleteUser(id);
     }
 
+    @Transactional
     public void editUser(User user) {
         userRepository.editUser(user);
     }

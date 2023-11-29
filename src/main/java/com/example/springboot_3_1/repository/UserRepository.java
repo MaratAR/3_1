@@ -4,12 +4,10 @@ import com.example.springboot_3_1.model.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Repository
-@Transactional
 public class UserRepository {
     @PersistenceContext
     private EntityManager entityManager;
