@@ -53,7 +53,7 @@ public class UserController {
         return "redirect:/";
     }
 
-    @GetMapping("users/delete")
+    @RequestMapping("users/delete")
     public String deleteUserById(@RequestParam("id") Long id) {
         userService.deleteUser(id);
         return "redirect:/";
